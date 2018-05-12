@@ -18,14 +18,13 @@
     }
 
 #topContainer {
-    background-color: #e6368b; 
-    height: 500px; 
-    margin-top: 80px;
+    /*background-color: #e6368b; */
+
 }
 
 #descriptionContainer {
     background-color: #56c3f0; 
-    height: 500px;
+    height: 200px;
 }
 
 #featuresContainer {
@@ -38,3 +37,35 @@
     height: 500px;
 }
 
+.navbar {
+    background-color: rgba(255,255,255,0.8);
+}
+
+#topheroimg {
+    float: right;
+    height: 650px;
+}
+
+.center {
+    text-align: center;
+}
+
+.left {
+    text-align: left;
+}
+
+.right {
+    text-align: right;
+}
+
+#callButton {
+    margin-top: 40px;
+}
+
+#heroText {
+    padding-top: 150px;
+}
+
+h1 {
+    color: white;
+}
