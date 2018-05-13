@@ -1,12 +1,13 @@
 @charset "utf-8";
 /* CSS Document */
 
+
 .grad1 {
-    background: #e6368b; /* Old browsers */
-    background: -moz-linear-gradient(top, #e6368b 1%, #56c3f0 100%); /* Old Firefox */
-    background: -webkit-linear-gradient(top, #e6368b 1%,#56c3f0 100%); /* Old Chrome & Old Safari*/
-    background: linear-gradient(to bottom, #e6368b 1%,#56c3f0 100%); /* Newer Browsers */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6368b', endColorstr='#56c3f0',GradientType=0 ); /* IE */
+    background: #aac928; /* Old browsers */
+    background: -moz-linear-gradient(-45deg, #aac928 0%, #56c3f0 67%, #56c3f0 100%); /* Old Firefox */
+    background: -webkit-linear-gradient(-45deg, #aac928 0%,#56c3f0 67%,#56c3f0 100%); /* Old Chrome & Old Safari*/
+    background: linear-gradient(135deg, #aac928 0%,#56c3f0 67%,#56c3f0 100%); /* Newer Browsers */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#aac928', endColorstr='#56c3f0',GradientType=1 ); /* IE */
     }
 
 .grad2 {
@@ -18,13 +19,13 @@
     }
 
 #topContainer {
-    /*background-color: #e6368b; */
-
+    padding-top:20px;
+    padding-bottom: 20px;
 }
 
 #descriptionContainer {
-    background-color: #56c3f0; 
-    height: 200px;
+    background-color: #fff; 
+    height: 100px;
 }
 
 #featuresContainer {
@@ -38,34 +39,43 @@
 }
 
 .navbar {
-    background-color: rgba(255,255,255,0.8);
+    background-color: rgba(255,255,255,1);
 }
 
 #topheroimg {
-    float: right;
-    height: 650px;
-}
 
-.center {
-    text-align: center;
-}
-
-.left {
-    text-align: left;
-}
-
-.right {
-    text-align: right;
 }
 
 #callButton {
-    margin-top: 40px;
+    display: block;
+    margin: 40px auto auto auto;
 }
 
 #heroText {
-    padding-top: 150px;
 }
 
 h1 {
     color: white;
+}
+
+#alert-container {
+    padding-top: 5px;
+    color: red;
+    text-align: center;
+    width: 100%;
+    margin-top: 80px;
+    background-color: black;
+    
+}
+
+#invalidEmail {
+    
+}
+
+#invalidPassword {
+    
+}
+
+#invalidLogin {
+    display: none;
 }

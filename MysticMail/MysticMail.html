@@ -12,87 +12,146 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
       
-    <!-- External CSS For MysticMail -->
+    <!-- Custom External CSS For MysticMail -->
     <link rel="stylesheet" href="MysticMail.css">
       
   </head>
     
-  <body data-spy="scroll" data-target=".navbar" data-offset="80">
-
-      <div class="container">
-
-          <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-
-              <a class="navbar-brand" href="#"><img src="images/Mystic_Mail_Horizontal.png" alt="MysticMail" height="50px"></a>
-              
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation"> 
-                  <span class="navbar-toggler-icon"></span>
-              </button>
-             
-              <div class="collapse navbar-collapse justify-content-end" id="navbarToggle">
-              
-                  <ul class="nav mx-auto nav-pills">
-
-                      <li class="nav-item-active">
-                          <a class="nav-link" href="#topContainer">Home</a>
-                      </li>
-
-                      <li class="nav-item">
-                          <a class="nav-link" href="#descriptionContainer">Description</a>
-                      </li>
-
-                      <li class="nav-item">
-                          <a class="nav-link" href="#featuresContainer">Features</a>
-                      </li>
-
-                      <li class="nav-item">
-                          <a class="nav-link" href="#downloadContainer">Download</a>
-                      </li>
-
-                  </ul>
-                                  
-                  <form class="form-inline my-2 my-lg-0 float-right">
-                      
-                      <label class="sr-only" for="loginUsername">Name</label>
-                      <input type="text" class="form-control mb-2 mr-sm-2" id="loginUsername" placeholder="Username (Email)">
-                      
-                      <label class="sr-only" for="password">Name</label>
-                      <input type="password" class="form-control mb-2 mr-sm-2" id="password" placeholder="Password">
-  
-
-                      
-                      <button type="submit" class="btn btn-primary mb-2">Login</button>
-                      
-                      <button type="submit" class="btn btn-secondary mb-2 ml-2">Register</button>
-                  
-                  </form>
-                  
-              </div>
-
-          </nav>
+  <body>         
           
-      </div>    
+      <div id="navContainer" class="container-fluid">
+          
+          <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+              
+              <a class="navbar-brand" href="#"><img src="images/Mystic_Mail_Horizontal.png" alt="MysticMail" height="50px"></a>
+
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation"> 
+
+                  <span class="navbar-toggler-icon"></span>
+
+              </button>
+
+              <div class="collapse navbar-collapse justify-content-end" id="navbarToggle">
+                  
+                  <div class="d-inline-flex">
+
+                      <ul class="nav mx-auto nav-pills">
+
+                          <li class="nav-item-active">
+
+                              <a class="nav-link" href="#topContainer">Home</a>
+
+                          </li>
+
+                          <li class="nav-item">
+
+                              <a class="nav-link" href="#descriptionContainer">Description</a>
+
+                          </li>
+
+                          <li class="nav-item">
+
+                              <a class="nav-link" href="#featuresContainer">Features</a>
+
+                          </li>
+
+                          <li class="nav-item">
+
+                              <a class="nav-link" href="#downloadContainer">Download</a>
+
+                          </li>
+
+                      </ul>
+
+                      <form class="form-inline my-2 my-lg-0 col-5">
+
+                          <label class="sr-only" for="loginUsername">Name</label>
+                          <input type="text" class="form-control mb-2 mr-sm-2" id="loginUsername" placeholder="Username (Email)">
+
+                          <label class="sr-only" for="password">Password</label>
+                          <input type="password" class="form-control mb-2 mr-sm-2" id="password" placeholder="Password">
+
+
+
+                          <button id="btnLogin" type="submit" class="btn btn-primary mb-2">Login</button>
+
+                          <button id="btnRegister" type="submit" class="btn btn-secondary mb-2 ml-2">Register</button>
+
+                      </form>
+                  
+                  </div> <!-- End inline-flex -->
+
+              </div>  <!-- End collapse container -->
+
+                  <div id="alert-container" class="visible float-none">
+
+                      <p> 
+                          <span id="invalidEmail">
+                              Your username is not valid. Please use your registed email address. 
+                          </span>
+
+                          <span id="invalidPassword">
+                              Your password is required to log in.
+                          </span>
+
+                          <span id="invalidLogin">
+                              The username/password cannot be found. Try again.
+                          </span>
+
+                      </p>    
+
+                  </div>
+
+          </nav> 
+      
+      </div> <!-- end navContainer -->
+
+      
+
+      
       
       <div id="topContainer" class="container-fluid grad1">
           
-          <div class="container" style="padding-top:130px;">
-              
-              <div class="d-inline-flex p-1">
-              
-                  <div id="heroText" class="d-block col-5">
+          <div class="container">
+  
+              <div class="row">
 
-                      <h1 class="left">A New Way To <br> Reach Inbox Zero</h1>
+                  <div id="heroText" class="col-sm-12 col-md-12 col-lg-4 align-self-center p-3 text-center">
 
-                      <h5 class="left">MysticMail is a brand new conceptual mail app that will revolutionize the way you think about your inbox. </h5>
+                      <h1>A New Way To Reach Inbox Zero</h1>
+              
+                      <h5>MysticMail is a brand new conceptual mail app that will revolutionize the way you think about your inbox. </h5>
 
                       <button id="callButton" type="submit" class="btn btn-lg btn-dark mb-2">Learn More</button>
 
                   </div>
-                  
-                  <div class="d-inline-flex p-1"><img id="topheroimg" src="images/phone2.png" alt="phone mockup 2"></div>
-              
+
+                  <div class="col-sm-12 col-md-12 col-lg-8">
+
+                      <img class="img-fluid" id="topheroimg" src="images/phone2.png" alt="phone mockup 2">
+
+                  </div>
+
               </div>
-          
+      
+          </div>
+
+      </div>
+      
+      
+      
+      <div id="" class="">
+
+          <div  class="col-5  p-1">
+
+              
+
+          </div>
+
+          <div class="col-7">
+
+              
+
           </div>
           
       </div>
@@ -119,7 +178,23 @@
       
           ...
     
-      </div>      
+      </div>
+      
+      <script type="text/javascript">
+      
+          $("#btnLogin").click(function() {
+          
+              var invalidEmail = true;
+              
+              if (invalidEmail) {
+                        
+                  $("#alert-container").removeClass("invisible");
+                  $("#alert-container").addClass("visible");
+                  
+              }
+          });
+      
+      </script>
       
   </body>
 </html>
