@@ -18,19 +18,19 @@
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#56c3f0', endColorstr='#AAC928',GradientType=0 ); /* IE */
     }
 
-#topContainer {
-    padding-top:20px;
-    padding-bottom: 20px;
+#navContainer {
+    position: fixed;
+    background-color: white;
+    clear: both;
 }
 
-#descriptionContainer {
-    background-color: #fff; 
-    height: 100px;
+#topContainer {
+    padding-top:130px;
+    padding-bottom: 200px;
 }
 
 #featuresContainer {
-    background-color: #AAC928; 
-    height: 500px;
+    background-color: #fff; 
 }
 
 #downloadContainer {
@@ -38,12 +38,10 @@
     height: 500px;
 }
 
-.navbar {
-    background-color: rgba(255,255,255,1);
-}
-
-#topheroimg {
-
+#footerContainer {
+    margin-top: 50px;
+    margin-bottom: 30px;
+    text-align: center;
 }
 
 #callButton {
@@ -51,20 +49,28 @@
     margin: 40px auto auto auto;
 }
 
-#heroText {
-}
-
 h1 {
     color: white;
 }
 
+.offsetContainer:before {
+    content: "";
+    height: 100px;
+    margin-top: -100px;
+    visibility: hidden;
+}
+
+.navbar {
+    background-color: rgba(255,255,255,1);
+    padding-top: 20px;
+}
+
 #alert-container {
-    padding-top: 5px;
+    padding: 5px;
     color: red;
     text-align: center;
     width: 100%;
-    margin-top: 80px;
-    background-color: black;
+    background-color: white;
     
 }
 
@@ -78,4 +84,36 @@ h1 {
 
 #invalidLogin {
     display: none;
+}
+
+body {
+    padding-top: 30px;
+    margin: 0px;
+}
+
+.card-deck {
+    height: 300px;
+}
+
+.card {
+    width: 18rem;
+    border: none;
+    border-radius: 20px;
+}
+
+.purpleCard {
+    color: white;
+    background-color: #922281;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.pinkCard {
+    color: white;
+    background-color: #E6368B;
+}
+
+.yellowCard {
+    color: white;
+    background-color: #F2E426;
 }
