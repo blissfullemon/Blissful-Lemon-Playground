@@ -3,11 +3,12 @@
 
 
 .grad1 {
-    background: #aac928; /* Old browsers */
-    background: -moz-linear-gradient(-45deg, #aac928 0%, #56c3f0 67%, #56c3f0 100%); /* Old Firefox */
-    background: -webkit-linear-gradient(-45deg, #aac928 0%,#56c3f0 67%,#56c3f0 100%); /* Old Chrome & Old Safari*/
-    background: linear-gradient(135deg, #aac928 0%,#56c3f0 67%,#56c3f0 100%); /* Newer Browsers */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#aac928', endColorstr='#56c3f0',GradientType=1 ); /* IE */
+    opacity: 20%;
+    background: #F4FFC6; /* Old browsers */
+    background: -moz-linear-gradient(-45deg, #F4FFC6 0%, #D8F1FB 67%, #D8F1FB 100%); /* Old Firefox */
+    background: -webkit-linear-gradient(-45deg, #F4FFC6 0%,#D8F1FB 67%,#D8F1FB 100%); /* Old Chrome & Old Safari*/
+    background: linear-gradient(135deg, #F4FFC6 0%,#D8F1FB 67%,#D8F1FB 100%); /* Newer Browsers */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#F4FFC6', endColorstr='#D8F1FB',GradientType=1 ); /* IE */
     }
 
 .grad2 {
@@ -18,15 +19,33 @@
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#56c3f0', endColorstr='#AAC928',GradientType=0 ); /* IE */
     }
 
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: #fff;
+    background-color: #E6368B;
+}
+
+.btn-primary {
+    background-color: #56C3F0;
+    border: none;
+}
+
+.btn-secondary {
+    background-color: #922281;
+    border: none;
+}
+
+a {
+    color: #E6368B;
+}
+
 #navContainer {
     position: fixed;
-    background-color: white;
     clear: both;
 }
 
 #topContainer {
-    padding-top:130px;
-    padding-bottom: 200px;
+    padding-top:160px;
+    padding-bottom: 180px;
 }
 
 #featuresContainer {
@@ -35,7 +54,7 @@
 
 #downloadContainer {
     background-color: #F2E426; 
-    height: 500px;
+    padding: 100px 0px;
 }
 
 #footerContainer {
@@ -50,18 +69,17 @@
 }
 
 h1 {
-    color: white;
+    color: #922281;
+    padding-bottom: 20px;
 }
 
-.offsetContainer:before {
-    content: "";
-    height: 100px;
-    margin-top: -100px;
-    visibility: hidden;
+h1, h3 {
+    font-family: "Nova Flat", Helvetica, Arial, "sans-serif";
+    text-transform: uppercase;
 }
 
 .navbar {
-    background-color: rgba(255,255,255,1);
+    background-color: rgba(255,255,255,0.95);
     padding-top: 20px;
 }
 
@@ -74,31 +92,15 @@ h1 {
     
 }
 
-#invalidEmail {
-    
-}
-
-#invalidPassword {
-    
-}
-
-#invalidLogin {
-    display: none;
-}
-
 body {
-    padding-top: 30px;
     margin: 0px;
-}
-
-.card-deck {
-    height: 300px;
 }
 
 .card {
     width: 18rem;
     border: none;
     border-radius: 20px;
+    padding: 20px;
 }
 
 .purpleCard {
@@ -106,6 +108,7 @@ body {
     background-color: #922281;
     text-align: center;
     border-radius: 20px;
+    padding: 0px 40px 40px 40px;
 }
 
 .pinkCard {
@@ -116,4 +119,24 @@ body {
 .yellowCard {
     color: white;
     background-color: #F2E426;
+}
+
+.iconContainer {
+    padding: 40px;
+}
+
+.fas, .far {
+    font-size: 75px;
+}
+
+.card-text {
+    margin-top: 30px;
+}
+
+.dlBadge {
+    width: 320px;
+}
+
+#footer-logo {
+    width: 30%;
 }

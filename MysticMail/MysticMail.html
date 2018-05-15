@@ -1,24 +1,27 @@
 <!doctype html>
 <html lang="en">
-  <head>
+    <head>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <title>MysticMail</title>
-            
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
-      
+
     <!-- Custom External CSS For MysticMail -->
     <link rel="stylesheet" href="MysticMail.css">
-      
-  </head>
-    
-  <body data-spy="scroll" data-target=".navbar" data-offset="100">         
-          
+
+    <!-- Font Awesome Icons-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+    </head>
+
+    <body data-spy="scroll" data-target="#navContainer" data-offset="250">      
+
       <div id="navContainer" class="fixed-top">
                     
           <div id="alert-container" class="d-none float-none">
@@ -53,23 +56,23 @@
 
               <div class="collapse navbar-collapse" id="navbarToggle">
                   
-                  <ul class="nav mx-auto">
+                  <ul class="nav nav-pills mx-auto">
 
-                      <li class="nav-item-active">
+                      <li class="nav-item active">
 
-                          <a class="nav-link" href="#">Home</a>
-
-                      </li>
-
-                      <li class="nav-item">
-
-                          <a class="nav-link" href="#featuresContainer">Features</a>
+                          <a class="nav-item nav-link active" href="#topContainer">Home</a>
 
                       </li>
 
                       <li class="nav-item">
 
-                          <a class="nav-link" href="#downloadContainer">Download</a>
+                          <a class="nav-item nav-link" href="#featuresContainer">Features</a>
+
+                      </li>
+
+                      <li class="nav-item">
+
+                          <a class="nav-item nav-link" href="#downloadContainer">Download</a>
 
                       </li>
 
@@ -112,7 +115,7 @@
 
       
       
-      <div id="topContainer" class="container-fluid grad1 offsetContainer">
+      <div id="topContainer" class="container-fluid grad1">
           
           <div class="container">
   
@@ -140,7 +143,7 @@
 
       </div> 
           
-      <div id="featuresContainer" class="container-fluid offsetContainer">
+      <div id="featuresContainer" class="container-fluid">
           
           <div class="card-deck align-self-center m-5">
   
@@ -148,8 +151,12 @@
 
                   <div class="card-body purpleCard">
 
-                      <h3>Feature Title</h3>
-                      <p class="card-text">A Description of the feature will be added in this section. An icon demonstrating the feature will also be added above the title.</p>
+                      <div class="iconContainer">
+                          <i class="fas fa-envelope"></i>
+                      </div>
+                      
+                      <h3>All Your Accounts</h3>
+                      <p class="card-text">Send and receive emails for all your accounts in one place. You can add up to 100 accounts, each with its own inbox, calendar, and contacts list.</p>
 
                   </div>
 
@@ -159,8 +166,12 @@
 
                   <div class="card-body purpleCard">
 
-                      <h3>Feature Title</h3>
-                      <p class="card-text">A Description of the feature will be added in this section. An icon demonstrating the feature will also be added above the title.</p>
+                      <div class="iconContainer">
+                          <i class="fas fa-clock"></i>
+                      </div>
+                      
+                      <h3>Custom Email Templates</h3>
+                      <p class="card-text">Designed to save you time with custom templates for messages that you send on a regular basis. Select the template, make a few changes, then send. It's that easy.</p>
 
                   </div>
 
@@ -170,8 +181,12 @@
 
                   <div class="card-body purpleCard">
 
-                      <h3>Feature Title</h3>
-                      <p class="card-text">A Description of the feature will be added in this section. An icon demonstrating the feature will also be added above the title.</p>
+                      <div class="iconContainer">
+                          <i class="far fa-calendar-alt"></i>
+                      </div>
+
+                      <h3>Events and Tasks</h3>
+                      <p class="card-text">The built-in calendar and task list integrates seamlessly with your existing calendar and task app so you never miss a beat.</p>
 
                   </div>
 
@@ -181,67 +196,91 @@
           
       </div> <!-- End Features Container-->      
       
-      <div id="downloadContainer" class="container-fluid offsetContainer">
+      <div id="downloadContainer" class="container-fluid">
       
-          ...
-    
+          <div class="container d-flex justify-content-center">          
+          
+          <div class="row">
+
+                  <div class="col-sm-12 col-md-12 col-lg-6 align-self-center p-3 text-center">
+
+                      <img class="dlBadge" src="images/app_store.png" alt="Download From iTunes">
+
+                  </div>
+
+                  <div class="col-sm-12 col-md-12 col-lg-6 align-self-center p-3 text-center">
+
+                      <img class="dlBadge" src="images/google_play.png" alt="Get It On Google Play">
+
+                  </div>
+
+              </div>
+          
+          </div>
+          
       </div>
 
       <footer id="footerContainer" class="container">
       
+          <img id="footer-logo" src="images/Mystic_Mail_Square.png" alt="MysticMail Logo">
+          
           <p>This landing page was created for demonstration purposes by Aimie Clouse.</p>
           <p>MysticMail is a conceptual mail app for Android and iOS devices. To learn more about the development of this landing page, <a href="https://www.blissfullemon.com/portfolio/MysticMail-Landing-Page" target="_blank"> click here </a> to view the project portfolio listing.</p>
     
-      </footer>
+      </footer>        
       
-      <script type="text/javascript">
-          
-          function validEmail(userEmail) {
-  
-                  var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-  
-                  return regex.test(userEmail);
+        
+        
+      
+    <script type="text/javascript">
 
-              }
-      
-          $("#btnLogin").click(function() {
-              
-              var email = $("#loginUsername").val();
+      function validEmail(userEmail) {
 
-              if ((email == "" || validEmail(email) == false) && ($("#password").val() == "")) {
-                        
-                  $("#alert-container").removeClass("d-none");
-                  $("#alert-container").addClass("d-block");
-                  $("#invalidEmail").removeClass("d-none");
-                  $("#invalidPassword").removeClass("d-none"); 
-                  
-              } else if ( email == "" || validEmail(email) == false) {
-                  
-                  $("#alert-container").removeClass("d-none");
-                  $("#alert-container").addClass("d-block");
-                  $("#invalidEmail").removeClass("d-none");  
-                  
-              } else if ( $("#password").val() == "" ) {
-                  
-                  $("#alert-container").removeClass("d-none");
-                  $("#alert-container").addClass("d-block");
-                  $("#invalidEmail").addClass("d-none"); 
-                  $("#invalidPassword").removeClass("d-none");    
-                         
-              } else {
-                  
-                  $("#alert-container").removeClass("d-block");
-                  $("#alert-container").addClass("d-none");
-                  $("#invalidEmail").addClass("d-none");
-                  $("#invalidPassword").addClass("d-none");
-                  
-                  alert ("You have entered a valid username and password. However, this login form is for testing purposes only.");
-                  
-              }
-              
-          });
+              var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+              return regex.test(userEmail);
+
+          }
+
+      $("#btnLogin").click(function() {
+
+          var email = $("#loginUsername").val();
+
+          if ((email == "" || validEmail(email) == false) && ($("#password").val() == "")) {
+
+              $("#alert-container").removeClass("d-none");
+              $("#alert-container").addClass("d-block");
+              $("#invalidEmail").removeClass("d-none");
+              $("#invalidPassword").removeClass("d-none"); 
+
+          } else if ( email == "" || validEmail(email) == false) {
+
+              $("#alert-container").removeClass("d-none");
+              $("#alert-container").addClass("d-block");
+              $("#invalidEmail").removeClass("d-none");  
+
+          } else if ( $("#password").val() == "" ) {
+
+              $("#alert-container").removeClass("d-none");
+              $("#alert-container").addClass("d-block");
+              $("#invalidEmail").addClass("d-none"); 
+              $("#invalidPassword").removeClass("d-none");    
+
+          } else {
+
+              $("#alert-container").removeClass("d-block");
+              $("#alert-container").addClass("d-none");
+              $("#invalidEmail").addClass("d-none");
+              $("#invalidPassword").addClass("d-none");
+
+              alert ("You have entered a valid username and password. However, this login form is for testing purposes only.");
+
+          }
+
+      });
+
+    </script>
       
-      </script>
-      
-  </body>
+    </body>
+    
 </html>
