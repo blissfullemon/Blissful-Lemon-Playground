@@ -1,0 +1,54 @@
+body {
+    padding: 15px;
+}
+
+.sidebar {
+    position: fixed;
+    float: left;
+    width: 200px;
+    height: 100%;
+}
+
+.main-content {
+    width: 100%;
+    margin-left: 230px;
+}
+
+.nav {
+    display: block;
+    width: 100%;
+    margin: auto;
+}
+
+.nav-item {
+    text-transform: uppercase;
+    width: 100%;
+    line-height: 18px;
+    text-align: center;
+}
+
+.top-margin-50 {
+    margin-top: 50px;
+}
+
+#logo {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.portfolio-img {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#copyright {
+    margin-top: 130px;
+    text-align: center;
+    font-size: 10pt;
+}
+
+.sub-item {
+    font-size: 0.7em;
+    line-height: 0.8em;
+    text-align: center;
+}
