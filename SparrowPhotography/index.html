@@ -8,12 +8,14 @@
     <title>Sparrow Photography</title>
     
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
-
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto+Slab" rel="stylesheet">
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <script src="main.js"></script>
 
 </head>
 <body>
@@ -24,7 +26,7 @@
 
             <div class="sidebar">
 
-                <img id="logo" src="images/sparrow_logo.png" alt="Sparrow Photography Logo">
+                <img id="logo" src="http://playground.blissfullemon.com/SparrowPhotography/images/sparrow_logo.png" alt="Sparrow Photography Logo">
                 
                 <div class="flex-column">
 
@@ -46,6 +48,12 @@
                     </ul>
                     
                 </div>   
+
+                <div id="social">
+                    <i class="social fab fa-facebook-square fa-2x"></i>
+                    <i class="social fab fa-twitter-square fa-2x"></i>
+                    <i class="social fab fa-google-plus-square fa-2x"></i>
+                </div>
                 
                 <div id="copyright">
                     Copyright &#169; 2018 <br> Sparrow Photography
@@ -60,25 +68,52 @@
                             <div class="row">
         
                                 <div class="col-sm-12 col-md-6 col-lg-4 p-2">
-        
-                                    <img class="portfolio-img weddings" src="images/portfolio1.jpeg" alt="">
-                                    <img class="portfolio-img animals" src="images/portfolio7.jpeg" alt="">
-                                    <img class="portfolio-img weddings" src="images/portfolio2.jpeg" alt="">
-        
+                                    <img id="p1" class="portfolio-img weddings" src="http://playground.blissfullemon.com/SparrowPhotography/images/portfolio1.jpeg" alt="" data-toggle="modal" data-target="#imageModal">
+                                    <img id="p4" class="portfolio-img weddings" src="http://playground.blissfullemon.com/SparrowPhotography/images/portfolio4.jpeg" alt="" data-toggle="modal" data-target="#imageModal">
+                                    <img id="p7" class="portfolio-img animals" src="http://playground.blissfullemon.com/SparrowPhotography/images/portfolio7.jpeg" alt="" data-toggle="modal" data-target="#imageModal">
+                                    <img id="p10" class="portfolio-img children-babies" src="http://playground.blissfullemon.com/SparrowPhotography/images/portfolio10.jpg" alt="" data-toggle="modal" data-target="#imageModal">
+                                    <img id="p13" class="portfolio-img children-babies animals" src="http://playground.blissfullemon.com/SparrowPhotography/images/portfolio13.jpg" alt="" data-toggle="modal" data-target="#imageModal">
+                                    <img id="p16" class="portfolio-img citiscapes" src="http://playground.blissfullemon.com/SparrowPhotography/images/portfolio16.jpg" alt="" data-toggle="modal" data-target="#imageModal">
+                                    <img id="p19" class="portfolio-img citiscapes" src="http://playground.blissfullemon.com/SparrowPhotography/images/portfolio19.jpg" alt="" data-toggle="modal" data-target="#imageModal">
+                                    <img id="p22" class="portfolio-img animals" src="http://playground.blissfullemon.com/SparrowPhotography/images/portfolio22.jpg" alt="" data-toggle="modal" data-target="#imageModal">
+                                    <img id="p25" class="portfolio-img weddings" src="http://playground.blissfullemon.com/SparrowPhotography/images/portfolio25.jpeg" alt="" data-toggle="modal" data-target="#imageModal">
+                                    <img id="p28" class="portfolio-img animals" src="http://playground.blissfullemon.com/SparrowPhotography/images/portfolio28.jpg" alt="" data-toggle="modal" data-target="#imageModal">
+                                    <img id="p31" class="portfolio-img children-babies" src="http://playground.blissfullemon.com/SparrowPhotography/images/portfolio31.jpg" alt="" data-toggle="modal" data-target="#imageModal">
+                                    <img id="p34" class="portfolio-img children-babies animals" src="http://playground.blissfullemon.com/SparrowPhotography/images/portfolio34.jpg" alt="" data-toggle="modal" data-target="#imageModal">
+                                    <img id="p37" class="portfolio-img children-babies" src="http://playground.blissfullemon.com/SparrowPhotography/images/portfolio37.jpg" alt="" data-toggle="modal" data-target="#imageModal">
+                                    <img id="p40" class="portfolio-img animals" src="http://playground.blissfullemon.com/SparrowPhotography/images/portfolio40.jpg" alt="" data-toggle="modal" data-target="#imageModal">
                                 </div>
-        
+                                    
                                 <div class="col-sm-12 col-md-6 col-lg-4 p-2">
-
-                                    <img class="portfolio-img weddings" src="images/portfolio3.jpeg" alt="">
-                                    <img class="portfolio-img weddings" src="images/portfolio4.jpeg" alt="">
-                
+                                    <img id="p2" class="portfolio-img weddings" src="http://playground.blissfullemon.com/SparrowPhotography/images/portfolio2.jpeg" alt="" data-toggle="modal" data-target="#imageModal">
+                                    <img id="p5" class="portfolio-img weddings" src="http://playground.blissfullemon.com/SparrowPhotography/images/portfolio5.jpeg" alt="" data-toggle="modal" data-target="#imageModal">
+                                    <img id="p8" class="portfolio-img animals" src="http://playground.blissfullemon.com/SparrowPhotography/images/portfolio8.jpg" alt="" data-toggle="modal" data-target="#imageModal">
+                                    <img id="p11" class="portfolio-img weddings" src="http://playground.blissfullemon.com/SparrowPhotography/images/portfolio11.jpeg" alt="" data-toggle="modal" data-target="#imageModal">
+                                    <img id="p14" class="portfolio-img animals" src="http://playground.blissfullemon.com/SparrowPhotography/images/portfolio14.jpg" alt="" data-toggle="modal" data-target="#imageModal">
+                                    <img id="p17" class="portfolio-img citiscapes" src="http://playground.blissfullemon.com/SparrowPhotography/images/portfolio17.jpg" alt="" data-toggle="modal" data-target="#imageModal">
+                                    <img id="p20" class="portfolio-img weddings" src="http://playground.blissfullemon.com/SparrowPhotography/images/portfolio20.jpeg" alt="" data-toggle="modal" data-target="#imageModal">
+                                    <img id="p23" class="portfolio-img weddings" src="http://playground.blissfullemon.com/SparrowPhotography/images/portfolio23.jpeg" alt="" data-toggle="modal" data-target="#imageModal">
+                                    <img id="p26" class="portfolio-img animals" src="http://playground.blissfullemon.com/SparrowPhotography/images/portfolio26.jpg" alt="" data-toggle="modal" data-target="#imageModal">
+                                    <img id="p29" class="portfolio-img animals" src="http://playground.blissfullemon.com/SparrowPhotography/images/portfolio29.jpg" alt="" data-toggle="modal" data-target="#imageModal">
+                                    <img id="p32" class="portfolio-img weddings" src="http://playground.blissfullemon.com/SparrowPhotography/images/portfolio32.jpeg" alt="" data-toggle="modal" data-target="#imageModal">
+                                    <img id="p35" class="portfolio-img citiscapes" src="http://playground.blissfullemon.com/SparrowPhotography/images/portfolio35.jpg" alt="" data-toggle="modal" data-target="#imageModal">
+                                    <img id="p38" class="portfolio-img weddings" src="http://playground.blissfullemon.com/SparrowPhotography/images/portfolio38.jpeg" alt="" data-toggle="modal" data-target="#imageModal">
                                 </div>
-        
+
                                 <div class="col-sm-12 col-md-6 col-lg-4 p-2">
-
-                                    <img class="portfolio-img weddings" src="images/portfolio5.jpeg" alt="">
-                                    <img class="portfolio-img weddings" src="images/portfolio6.jpeg" alt="">
-
+                                    <img id="p3" class="portfolio-img weddings" src="http://playground.blissfullemon.com/SparrowPhotography/images/portfolio3.jpeg" alt="" data-toggle="modal" data-target="#imageModal">
+                                    <img id="p6" class="portfolio-img weddings" src="http://playground.blissfullemon.com/SparrowPhotography/images/portfolio6.jpeg" alt="" data-toggle="modal" data-target="#imageModal">
+                                    <img id="p9" class="portfolio-img citiscapes" src="http://playground.blissfullemon.com/SparrowPhotography/images/portfolio9.jpg" alt="" data-toggle="modal" data-target="#imageModal">
+                                    <img id="p12" class="portfolio-img weddings" src="http://playground.blissfullemon.com/SparrowPhotography/images/portfolio12.jpeg" alt="" data-toggle="modal" data-target="#imageModal">
+                                    <img id="p15" class="portfolio-img animals" src="http://playground.blissfullemon.com/SparrowPhotography/images/portfolio15.jpg" alt="" data-toggle="modal" data-target="#imageModal">
+                                    <img id="p18" class="portfolio-img weddings" src="http://playground.blissfullemon.com/SparrowPhotography/images/portfolio18.jpeg" alt="" data-toggle="modal" data-target="#imageModal">
+                                    <img id="p21" class="portfolio-img weddings" src="http://playground.blissfullemon.com/SparrowPhotography/images/portfolio21.jpeg" alt="" data-toggle="modal" data-target="#imageModal">
+                                    <img id="p24" class="portfolio-img animals" src="http://playground.blissfullemon.com/SparrowPhotography/images/portfolio24.jpg" alt="" data-toggle="modal" data-target="#imageModal">
+                                    <img id="p27" class="portfolio-img citiscapes" src="http://playground.blissfullemon.com/SparrowPhotography/images/portfolio27.jpg" alt="" data-toggle="modal" data-target="#imageModal">
+                                    <img id="p30" class="portfolio-img children-babies" src="http://playground.blissfullemon.com/SparrowPhotography/images/portfolio30.jpg" alt="" data-toggle="modal" data-target="#imageModal">
+                                    <img id="p33" class="portfolio-img animals" src="http://playground.blissfullemon.com/SparrowPhotography/images/portfolio33.jpg" alt="" data-toggle="modal" data-target="#imageModal">
+                                    <img id="p36" class="portfolio-img children-babies" src="http://playground.blissfullemon.com/SparrowPhotography/images/portfolio36.jpg" alt="" data-toggle="modal" data-target="#imageModal">
+                                    <img id="p39" class="portfolio-img animals" src="http://playground.blissfullemon.com/SparrowPhotography/images/portfolio39.jpg" alt="" data-toggle="modal" data-target="#imageModal">
                                 </div>
         
                             </div>
@@ -89,6 +124,26 @@
         
         </div>
 
+    </div>
+
+
+    <div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="imageModal" aria-hidden="true">
+        
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            
+            <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            
+            <div class="modal-body">
+                <img class="modal-image" src="" alt="">
+            </div>
+
+        </div>
+        </div>
     </div>
 
 </body>

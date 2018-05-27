@@ -21,6 +21,7 @@ body {
 }
 
 .nav-item {
+    font-family: 'Roboto Slab', serif;
     text-transform: uppercase;
     width: 100%;
     line-height: 18px;
@@ -39,16 +40,54 @@ body {
 .portfolio-img {
     width: 100%;
     margin-bottom: 20px;
+    cursor: zoom-in;
 }
 
 #copyright {
-    margin-top: 130px;
+    font-family: 'Roboto Slab', serif;
+    margin-top: 20px;
     text-align: center;
     font-size: 10pt;
 }
 
 .sub-item {
+    font-family: 'Roboto Slab', serif;
     font-size: 0.7em;
     line-height: 0.8em;
     text-align: center;
 }
+
+.sub-item a:hover, .nav-item a:hover {
+    color: #000000;
+}
+
+.sub-item a {
+    color: #aeaeae;
+}
+
+.nav-item a {
+    color: #707070;
+}
+
+#social {
+    margin-top: 100px;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+.social {
+    color: gray;
+    margin: 5px;
+}
+
+@media (min-width: 480px) {
+    .modal-dialog {
+        max-width: 1000px;
+    }
+}
+
+.modal-image {
+    width: 100%;
+}
+

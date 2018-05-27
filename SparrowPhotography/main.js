@@ -12,6 +12,10 @@ function portfolioFilter(category) {
 
 }
 
+function displayModal() {
+
+}
+
 window.onload = function() {
 
     $("#portfolio").click(function(){
@@ -47,6 +51,11 @@ window.onload = function() {
         portfolioFilter("animals");
 
     });
+
+    $('#imageModal').on('show.bs.modal', function (event) {
+        var imageSource = $(event.relatedTarget).attr('src');
+        $(".modal-image").attr('src', imageSource);
+    })
 
 }
 
