@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>The Wedding of Hayden York and Oliver Abernathy</title>
+    
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Oswald|Petit+Formal+Script" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+
+</head>
+<body>
+
+    <div id="card-box">
+
+        <div id="rsvp-edge">RSVP</div>
+        <div id="invitation-edge">INVITATION</div>
+
+        <div id="password-body">
+
+            <h2 class="inv-alert script">This Event Is By Invitation Only</h2>
+            <input type="text" id="txt-password" placeholder="Enter Password">
+            <button id="btn-password" type="button" onclick=verifyPassword()>Submit</button>
+            <p id="hint">Hint: You should have received the password by mail.</p>
+            <p id="login-error"></p>
+
+        </div>
+
+        <div id="invitation-body">
+
+                <p id="line1" class="small-text">Together with their families,</p>
+
+                <div>
+
+                    <p id="first" class="script names">Hayden<br>York</p>
+                    <p id="amp" class="script names">&</p>
+                    <p id="second" class="script names">Oliver<br>Abernathy</p>
+                    
+                </div>
+
+                <p id="line2" class="small-text">invite you to join in the celebration of their wedding</p>
+                <p class="script">Saturday, August 18, 2018 <span class="small-text">at</span> 2:30 <span class="small-text">PM</span></p>
+                <p class="small-text">located at</p>
+                <p class="script">Wegerzyn Gardens MetroPark <br> Dayton, Ohio</p>
+        
+        </div>
+
+        <div id="rsvp-body">
+
+            <div class="countdown-section">
+
+                <div class="countdown-block">
+                    <div class="countdown-text" id="countdown-text-left">There are only</div>
+                </div>
+                <div class="time-block"> 
+                    <div class="time" id="days">00</div>
+                    <div class="time-label">days</div>
+                </div>
+                <div class="time-block"> 
+                    <div class="time" id="hours">00</div>
+                    <div class="time-label">hours</div>
+                </div>
+                <div class="time-block"> 
+                    <div class="time" id="minutes">00</div>
+                    <div class="time-label">minutes</div>
+                </div>
+                <div class="countdown-block">
+                    <div class="countdown-text" id="countdown-text-right">left to RSVP!</div>
+                </div>
+
+            </div>
+
+            <form id="rsvp-form">
+
+                <p id="rsvp-info" class="small-text">We have reserved seats for you and 3 guests.<br>
+                Enter your information below to confirm your attendance or give the seats back.</p>
+
+                <div class="guest">
+                
+                    <input type="text" class="guest-name" id="name1" placeholder="Full Name">
+
+                    <select name="attendance1" id="attendance1">
+                        <option value="" disabled selected>Attendance Options</option>
+                        <option value="notattending">Not Attending</option>
+                        <option value="both">Ceremony and Reception</option>
+                        <option value="reception">Reception Only</option>
+                        <option value="ceremony">Ceremony Only</option>
+                    </select>
+
+                    <select name="meal1" disabled>
+                        <option value="" disabled selected>Meal Options</option>
+                        <option value="beef">Beef</option>
+                        <option value="chicken">Chicken</option>
+                        <option value="vegetarian">Vegetarian</option>
+                    </select>
+
+                </div>
+
+                <div class="guest">
+
+                    <input type="text" class="guest-name" id="name2" placeholder="Full Name" disabled>
+
+                    <select name="attendance2" disabled>
+                        <option value="" disabled selected>Attendance Options</option>
+                        <option value="notattending">Not Attending</option>
+                        <option value="both">Ceremony and Reception</option>
+                        <option value="reception">Reception Only</option>
+                        <option value="ceremony">Ceremony Only</option>
+                    </select>
+
+                    <select name="meal2" disabled>
+                        <option value="" disabled selected>Meal Options</option>
+                        <option value="beef">Beef</option>
+                        <option value="chicken">Chicken</option>
+                        <option value="vegetarian">Vegetarian</option>
+                    </select>
+
+                </div>
+
+                <div class="guest">
+
+                    <input type="text" class="guest-name" id="name3" placeholder="Full Name" disabled>
+
+                    <select name="attendance3" disabled>
+                        <option value="" disabled selected>Attendance Options</option>
+                        <option value="notattending">Not Attending</option>
+                        <option value="both">Ceremony and Reception</option>
+                        <option value="reception">Reception Only</option>
+                        <option value="ceremony">Ceremony Only</option>
+                    </select>
+
+                    <select name="meal3" disabled>
+                        <option value="" disabled selected>Meal Options</option>
+                        <option value="beef">Beef</option>
+                        <option value="chicken">Chicken</option>
+                        <option value="vegetarian">Vegetarian</option>
+                    </select>
+    
+                </div>
+
+                <div class="guest">
+
+                    <input type="text" class="guest-name" id="name4" placeholder="Full Name" disabled>
+
+                    <select name="attendance4" disabled>
+                        <option value="" disabled selected>Attendance Options</option>
+                        <option value="notattending">Not Attending</option>
+                        <option value="both">Ceremony and Reception</option>
+                        <option value="reception">Reception Only</option>
+                        <option value="ceremony">Ceremony Only</option>
+                    </select>
+
+                    <select name="meal4" disabled>
+                        <option value="" disabled selected>Meal Options</option>
+                        <option value="beef">Beef</option>
+                        <option value="chicken">Chicken</option>
+                        <option value="vegetarian">Vegetarian</option>
+                    </select>
+    
+                </div>
+
+                <button id="btn-rsvp">Submit</button>
+
+            </form>
+
+            <p>If you have any questions, please contact our wedding coordinator,<br>Margarete Jeanvoneau: (937)555-5555.</p>
+    
+        </div>
+    
+        <div id="rsvp-confirmation">
+            <p>Thank you for your reply!</p>
+
+            <p>If you have any questions, please contact our wedding coordinator,<br>Margarete Jeanvoneau: (937)555-5555.</p>
+            
+
+        </div>
+
+        <div id="map-body">
+
+                <p>If you have any questions, please contact our wedding coordinator,<br>Margarete Jeanvoneau: (937)555-5555.</p>
+    
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d49041.800279499854!2d-84.23897809356039!3d39.80446783676211!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x884081975e1b0eab%3A0x52f37f4354005301!2sWegerzyn+Gardens+MetroPark!5e0!3m2!1sen!2sus!4v1527707418846" width="650" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+        </div>
+
+        <div id="map-edge">MAP</div>
+
+    </div>
+
+    <script src="main.js"></script>
+
+</body>
+</html>
