@@ -17,10 +17,12 @@
 </head>
 <body>
 
+    <img id="bg-img" src="images/flowers.png" alt=flowers>
+
     <div id="card-box">
 
-        <div id="rsvp-edge">RSVP</div>
-        <div id="invitation-edge">INVITATION</div>
+        <div id="rsvp-edge" disabled>RSVP</div>
+        <div id="invitation-edge" disabled>INVITATION</div>
 
         <div id="password-body">
 
@@ -76,6 +78,8 @@
 
             </div>
 
+            <p id="formError"><span id="errors"></span> <a href="javascript:displayErrors();">Click here</a> to see what the errors are.</p>
+
             <form id="rsvp-form">
 
                 <p id="rsvp-info" class="small-text">We have reserved seats for you and 3 guests.<br>
@@ -85,7 +89,7 @@
                 
                     <input type="text" class="guest-name" id="name1" placeholder="Full Name">
 
-                    <select name="attendance1" id="attendance1">
+                    <select name="attendance1" id="attendance1" disabled>
                         <option value="" disabled selected>Attendance Options</option>
                         <option value="notattending">Not Attending</option>
                         <option value="both">Ceremony and Reception</option>
@@ -93,7 +97,7 @@
                         <option value="ceremony">Ceremony Only</option>
                     </select>
 
-                    <select name="meal1" disabled>
+                    <select name="meal1" id="meal1" disabled>
                         <option value="" disabled selected>Meal Options</option>
                         <option value="beef">Beef</option>
                         <option value="chicken">Chicken</option>
@@ -104,9 +108,9 @@
 
                 <div class="guest">
 
-                    <input type="text" class="guest-name" id="name2" placeholder="Full Name" disabled>
+                    <input type="text" class="guest-name" id="name2" placeholder="Full Name">
 
-                    <select name="attendance2" disabled>
+                    <select name="attendance2" id="attendance2" disabled>
                         <option value="" disabled selected>Attendance Options</option>
                         <option value="notattending">Not Attending</option>
                         <option value="both">Ceremony and Reception</option>
@@ -114,7 +118,7 @@
                         <option value="ceremony">Ceremony Only</option>
                     </select>
 
-                    <select name="meal2" disabled>
+                    <select name="meal2" id="meal2" disabled>
                         <option value="" disabled selected>Meal Options</option>
                         <option value="beef">Beef</option>
                         <option value="chicken">Chicken</option>
@@ -125,9 +129,9 @@
 
                 <div class="guest">
 
-                    <input type="text" class="guest-name" id="name3" placeholder="Full Name" disabled>
+                    <input type="text" class="guest-name" id="name3" placeholder="Full Name">
 
-                    <select name="attendance3" disabled>
+                    <select name="attendance3" id="attendance3" disabled>
                         <option value="" disabled selected>Attendance Options</option>
                         <option value="notattending">Not Attending</option>
                         <option value="both">Ceremony and Reception</option>
@@ -135,7 +139,7 @@
                         <option value="ceremony">Ceremony Only</option>
                     </select>
 
-                    <select name="meal3" disabled>
+                    <select name="meal3" id="meal3" disabled>
                         <option value="" disabled selected>Meal Options</option>
                         <option value="beef">Beef</option>
                         <option value="chicken">Chicken</option>
@@ -146,9 +150,9 @@
 
                 <div class="guest">
 
-                    <input type="text" class="guest-name" id="name4" placeholder="Full Name" disabled>
+                    <input type="text" class="guest-name" id="name4" placeholder="Full Name">
 
-                    <select name="attendance4" disabled>
+                    <select name="attendance4" id="attendance4" disabled>
                         <option value="" disabled selected>Attendance Options</option>
                         <option value="notattending">Not Attending</option>
                         <option value="both">Ceremony and Reception</option>
@@ -156,7 +160,7 @@
                         <option value="ceremony">Ceremony Only</option>
                     </select>
 
-                    <select name="meal4" disabled>
+                    <select name="meal4" id="meal4" disabled>
                         <option value="" disabled selected>Meal Options</option>
                         <option value="beef">Beef</option>
                         <option value="chicken">Chicken</option>
@@ -165,31 +169,31 @@
     
                 </div>
 
-                <button id="btn-rsvp">Submit</button>
+                <button id="btn-rsvp" type="button" onclick=submitRSVP()>Submit</button>
 
             </form>
 
-            <p>If you have any questions, please contact our wedding coordinator,<br>Margarete Jeanvoneau: (937)555-5555.</p>
+            <p class="contact">If you have any questions, please contact our wedding coordinator,<br>Margarete Jeanvoneau: (937) 555-5555.</p>
     
         </div>
     
         <div id="rsvp-confirmation">
             <p>Thank you for your reply!</p>
 
-            <p>If you have any questions, please contact our wedding coordinator,<br>Margarete Jeanvoneau: (937)555-5555.</p>
+            <p class="contact">If you have any questions, please contact our wedding coordinator,<br>Margarete Jeanvoneau: (937) 555-5555.</p>
             
 
         </div>
 
         <div id="map-body">
 
-                <p>If you have any questions, please contact our wedding coordinator,<br>Margarete Jeanvoneau: (937)555-5555.</p>
+                <p class="contact">If you have any questions, please contact our wedding coordinator,<br>Margarete Jeanvoneau: (937) 555-5555.</p>
     
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d49041.800279499854!2d-84.23897809356039!3d39.80446783676211!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x884081975e1b0eab%3A0x52f37f4354005301!2sWegerzyn+Gardens+MetroPark!5e0!3m2!1sen!2sus!4v1527707418846" width="650" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 
         </div>
 
-        <div id="map-edge">MAP</div>
+        <div id="map-edge" disabled>MAP</div>
 
     </div>
 

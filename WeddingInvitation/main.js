@@ -1,44 +1,52 @@
 var password = "100DAYS";
-var deadline = new Date("March 22, 2018");
+var deadline = new Date("July 22, 2018");
+var guestList = [];
+
+var loggedIn = false;
+
+var errors = 0;
+var errorList = "";
 
 function verifyPassword() {
 
-    showInvitation();
     updateTimer(deadline);
 
-    // var passwordEntered = document.getElementById("txt-password").value;
+    var passwordEntered = document.getElementById("txt-password").value;
 
-    // if (passwordEntered.length != 0 && passwordEntered != undefined) {
+    if (passwordEntered.length != 0 && passwordEntered != undefined) {
 
-    //     if (passwordEntered.toUpperCase() === password) {
+        if (passwordEntered.toUpperCase() === password) {
             
-    //         showInvitation();
+            showInvitation();
 
-    //     } else {
+            loggedIn = true;
 
-    //         document.getElementById("login-error").innerHTML = "Sorry, you entered an incorrect password. Please try again.";
+        } else {
 
-    //     }
+            document.getElementById("login-error").innerHTML = "Sorry, you entered an incorrect password. Please try again.";
 
-    // } else {
+        }
 
-    //     document.getElementById("login-error").innerHTML = "You must enter a password to continue.";
+    } else {
 
-    // }
+        document.getElementById("login-error").innerHTML = "You must enter a password to continue.";
+
+    }
 }
 
 function showInvitation() {
 
     console.log("showInvitation() function has begun executing");
 
-    $("#password-body").css("display", "none");
-    $("#map-body").css("display", "none");
-    $("#rsvp-body").css("display", "none");
-    $("#invitation-body").css("display", "block");
+    if (loggedIn == true) {
+        $("#password-body").css("display", "none");
+        $("#map-body").css("display", "none");
+        $("#rsvp-body").css("display", "none");
+        $("#invitation-body").css("display", "block");
 
-    $("#rsvp-edge").css("visibility", "visible");
-    $("#map-edge").css("visibility", "visible");
-    $("#invitation-edge").css("visibility", "visible");
+        $("#rsvp-confirmation").css("display", "none");
+
+    }
 
 }
 
@@ -46,12 +54,16 @@ function showRSVP() {
 
     console.log("showRSVP() function has begun executing");
 
-    $("#invitation-body").css("display", "none");
-    $("#map-body").css("display", "none");
-    $("#rsvp-confirmation").css("display", "none");
-    $("#rsvp-body").css("display", "block");
+    if (loggedIn == true) {
 
-    disableRSVP(deadline);
+        $("#invitation-body").css("display", "none");
+        $("#map-body").css("display", "none");
+        $("#rsvp-confirmation").css("display", "none");
+        $("#rsvp-body").css("display", "block");
+
+        disableRSVP(deadline);
+
+    }
 
 }
 
@@ -68,10 +80,14 @@ function showMap() {
 
     console.log("showMap() function has begun executing");
 
-    $("#invitation-body").css("display", "none");
-    $("#rsvp-body").css("display", "none");
-    $("#rsvp-confirmation").css("display", "none");
-    $("#map-body").css("display", "block");
+    if (loggedIn == true) {
+
+        $("#invitation-body").css("display", "none");
+        $("#rsvp-body").css("display", "none");
+        $("#rsvp-confirmation").css("display", "none");
+        $("#map-body").css("display", "block");
+
+    }
 
 }
 
@@ -117,21 +133,79 @@ function disableRSVP(deadline) {
 
     if (timeLeft.totalTime <= 0) {
         $("#name1").prop('disabled','disabled');
-        $("#attendance1").prop('disabled','disabled');
         $("#btn-rsvp").prop('disabled','disabled');
+        $("#name2").prop('disabled','disabled');
+        $("#name3").prop('disabled','disabled');
+        $("#name4").prop('disabled','disabled');
 
         $("#countdown-text-left").css('visibility','hidden');
         $("#countdown-text-right").css('visibility','hidden');
 
         $("#rsvp-info").html("The deadline to RSVP has passed.<br>If you still wish to attend the event, contact the wedding coordinator.");
-        $("#rsvp-info").css("color","red");
+        $("#rsvp-info").css("color","#F7789C");
     }
 
 }
 
+function checkInput() {
 
+    var name;
+    var attendance;
+    var meal;
+    errors = 0;
+    errorList = "";
 
-function RSVP() {
+    for (var i = 1; i < 5; i++) {
+
+        name = $("#name" + i).val();
+        attendance = $("#attendance" + i).val();
+        meal = $("#meal" + i).val();
+
+        if (name.length > 0) {
+            guestList.push(name);
+            
+            if (attendance != null) {
+                guestList.push(attendance);
+
+                if (meal == null && (attendance == "both" || attendance == "reception")) {
+                    errorList = errorList + ("You must select a meal for guest " + i + " if they plan to attend the reception. ");
+                    errors++;
+                } else if (meal != null) {
+                    guestList.push(meal);
+                }
+            } else {
+                errorList = errorList + ("You must specify an attendance option for guest " + i + ". ");
+                errors++;
+            }
+
+        }
+
+    }
+
+    if (errors > 0) {
+        console.log(errorList);
+        console.log(errors);
+        $("#errors").html("There are " + errors + " errors that must be fixed.");
+        $("#formError").css("visibility", "visible");
+    } else {
+        $("#formError").css("visibility", "hidden");
+    }
+
+}
+
+function displayErrors() {
+
+    alert(errorList);
+
+}
+
+function submitRSVP() {
+    
+    checkInput();
+
+    if (errors === 0){
+        showConfirmation();
+    }
 
 }
 
@@ -150,3 +224,198 @@ $("#invitation-edge").click( function() {
     showInvitation();
 });
 
+$("#name1").keydown( function(){
+
+    var name = $("#name1").val();
+
+    if (name.length > 1) {
+
+        $("#attendance1").prop("disabled", false);
+
+    } else {
+        $("#attendance1").val("");
+        $("#attendance1").prop("disabled", "disabled");
+    }
+
+});
+
+$("#name1").change( function(){
+
+    var name = $("#name1").val();
+
+    if (name.length > 1) {
+
+        $("#attendance1").prop("disabled", false);
+
+    } else {
+        $("#attendance1").val("");
+        $("#attendance1").prop("disabled", "disabled");
+        $("#meal1").val("");
+        $("#meal1").prop("disabled", "disabled");
+    }
+
+});
+
+$("#name2").keydown( function(){
+
+    var name = $("#name2").val();
+
+    if (name.length > 1) {
+
+        $("#attendance2").prop("disabled", false);
+
+    } else {
+        $("#attendance2").val("");
+        $("#attendance2").prop("disabled", "disabled");
+    }
+
+});
+
+$("#name2").change( function(){
+
+    var name = $("#name2").val();
+
+    if (name.length > 1) {
+
+        $("#attendance2").prop("disabled", false);
+
+    } else {
+        $("#attendance2").val("");
+        $("#attendance2").prop("disabled", "disabled");
+        $("#meal2").val("");
+        $("#meal2").prop("disabled", "disabled");
+    }
+
+});
+
+$("#name3").keydown( function(){
+
+    var name = $("#name3").val();
+
+    if (name.length > 1) {
+
+        $("#attendance3").prop("disabled", false);
+
+    } else {
+        $("#attendance3").val("");
+        $("#attendance3").prop("disabled", "disabled");
+    }
+
+});
+
+$("#name3").change( function(){
+
+    var name = $("#name3").val();
+
+    if (name.length > 1) {
+
+        $("#attendance3").prop("disabled", false);
+
+    } else {
+        $("#attendance3").val("");
+        $("#attendance3").prop("disabled", "disabled");
+        $("#meal3").val("");
+        $("#meal3").prop("disabled", "disabled");
+    }
+
+});
+
+$("#name4").keydown( function(){
+
+    var name = $("#name4").val();
+
+    if (name.length > 1) {
+
+        $("#attendance4").prop("disabled", false);
+
+    } else {
+        $("#attendance4").val("");
+        $("#attendance4").prop("disabled", "disabled");
+    }
+
+});
+
+$("#name4").change( function(){
+
+    var name = $("#name4").val();
+
+    if (name.length > 1) {
+
+        $("#attendance4").prop("disabled", false);
+
+    } else {
+        $("#attendance4").val("");
+        $("#attendance4").prop("disabled", "disabled");
+        $("#meal4").val("");
+        $("#meal4").prop("disabled", "disabled");
+    }
+
+});
+
+$("#attendance1").change( function(){
+    console.log("Attendance has been changed!");
+
+    var attendanceOption = $("#attendance1").val();
+    console.log(attendanceOption);
+
+    if (attendanceOption == "both" || attendanceOption == "reception") {
+
+        $("#meal1").prop("disabled", false);
+
+    } else {
+        $("#meal1").prop("disabled","disabled");
+        $("#meal1").val("");
+    }
+
+});
+
+$("#attendance2").change( function(){
+    console.log("Attendance has been changed!");
+
+    var attendanceOption = $("#attendance2").val();
+    console.log(attendanceOption);
+
+    if (attendanceOption == "both" || attendanceOption == "reception") {
+
+        $("#meal2").prop("disabled", false);
+
+    } else {
+        $("#meal2").prop("disabled","disabled");
+        $("#meal2").val("");
+    }
+
+});
+
+$("#attendance3").change( function(){
+    console.log("Attendance has been changed!");
+
+    var attendanceOption = $("#attendance3").val();
+    console.log(attendanceOption);
+
+    if (attendanceOption == "both" || attendanceOption == "reception") {
+
+        $("#meal3").prop("disabled", false);
+
+    } else {
+        $("#meal3").prop("disabled","disabled");
+        $("#meal3").val("");
+    }
+
+});
+
+$("#attendance4").change( function(){
+    console.log("Attendance has been changed!");
+
+    var attendanceOption = $("#attendance4").val();
+    console.log(attendanceOption);
+
+    if (attendanceOption == "both" || attendanceOption == "reception") {
+
+        $("#meal4").prop("disabled", false);
+
+    } else {
+        $("#meal4").prop("disabled","disabled");
+        $("#meal4").val("");
+    }
+
+});
